@@ -13,11 +13,9 @@ $(document).ready(function(){
    var newActivity= new Activity(inputtedactivity, inputtedtime);
 
    $("ul#activities").append("<li><span class='activities'>" + inputtedactivity + " - " + inputtedtime  + "</span></li>");
+
    $(".activities").last().click(function(){
      $("ul#completed-activities").append("<li><span class='activities'>" + inputtedactivity + " - " + inputtedtime  + "</span></li>");
-     $("btnRemove").click(function(){
-       $("#tasks").eq(5).remove();
-     });
    });
 
    $("input#new-activity").val("");
